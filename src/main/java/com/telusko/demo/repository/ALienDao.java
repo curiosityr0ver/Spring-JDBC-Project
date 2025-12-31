@@ -11,6 +11,7 @@ public class ALienDao {
 
     public void save(Alien alien) {
 //        added
+        System.out.println("Added");
     }
 
     public List<Alien> findAll() {
