@@ -1,5 +1,10 @@
 package com.telusko.demo.model;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component()
+@Scope("Prototype")
 public class Alien {
     private int id;
     private String name;
@@ -27,5 +32,14 @@ public class Alien {
 
     public void setTech(String tech) {
         this.tech = tech;
+    }
+
+    @Override
+    public String toString() {
+        return "Alien{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", tech='" + tech + '\'' +
+                '}';
     }
 }
