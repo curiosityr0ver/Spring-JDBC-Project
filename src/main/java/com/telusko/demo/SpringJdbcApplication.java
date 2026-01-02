@@ -1,7 +1,7 @@
 package com.telusko.demo;
 
 import com.telusko.demo.model.Alien;
-import com.telusko.demo.repository.ALienDao;
+import com.telusko.demo.repository.AlienDao;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -18,7 +18,7 @@ public class SpringJdbcApplication {
 		alien1.setTech("Java");
 
 
-		ALienDao repo = context.getBean(ALienDao.class);
+		AlienDao repo = context.getBean(AlienDao.class);
 		repo.save(alien1);
 		System.out.println(repo.findAll());
 	}
